@@ -19,7 +19,7 @@ $.fn.typewriter = function() {
             ">" != b.substring(a, a + 1);) a++
       }
       c.html(b.substring(d, a++) + (a & 1 ? "_" : ""));
-      a >= b.length || setTimeout(e, 5 + 50 *
+      a >= b.length || setTimeout(e, 1 + 10 *
         Math.random())
     };
     e()
