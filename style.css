@@ -17,6 +17,10 @@ body {
   color: #f8f8f8;
 }
 
+p {
+  color: #14b7ff;
+}
+
 .terminal {
   background: transparent;
   position: absolute;
