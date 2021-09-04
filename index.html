@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - XPERT TERMINAL</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<head>
+  <title>Mr Expert</title>
+<!-- Particles -->
+<script type = "x-shader/x-vertex" id = "vertex">
+			
+		attribute float size;
+		uniform float bass;
+					
+		void main() {
+							
+			  vec4 mvPosition = modelViewMatrix * vec4(position, 1.0);
+			
+				gl_PointSize = size * bass * (100.0 / length(mvPosition.xyz));
+			
+				gl_Position = projectionMatrix * mvPosition;
+		
+		}
+		
+</script>
+		
+<script type = "x-shader/x-fragment" id = "fragment">
+		
+		uniform vec3 color;
+		uniform sampler2D texture;
+		uniform float opacity;
+		
+		void main() {
+		
+				vec4 outColor = texture2D(texture, gl_PointCoord);
+		
+				gl_FragColor = outColor * vec4(color, opacity);
+						
+		}
+		
+</script>
+</head>
+
+<body>
+<div class = "play"></div>
+  <div class="terminal">
+    <span class="dollar"></span> hi there, i'm Mr 3XP3R7
+    <br/>
+    <span class="dollar"></span> a Creative developer
+    <br/>
+    <span class="dollar"></span> based in Ukraine
+    <br/>
+    <span class="dollar"></span> I do graphic design & codes. 
+    <br/>
+    <span class="dollar"></span> See more on my Instagram
+  </div>
+
+</body>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r68/three.min.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16395/tween.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/stats.js/r11/Stats.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.5/dat.gui.min.js'></script>
+<script src='https://js.leapmotion.com/0.2.1/leap.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
