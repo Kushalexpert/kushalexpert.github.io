@@ -17,9 +17,6 @@ body {
   color: #f8f8f8;
 }
 
-vx {
-  color: red;
-}
 
 .terminal {
   background: transparent;
@@ -40,3 +37,28 @@ vx {
   content: '$';
   color: #00bcff;
 }
+
+
+.wrap {
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 200px;
+  margin-left: -200px;
+  margin-top: -100px;
+  position: absolute;
+}
+code {
+  color: white;
+}
+span.blue {
+  color: #48beef;
+}
+span.comment {
+  color: #7f8c8d;
+}
+span.load {
+  color: #f39c12;
+}
+
+
