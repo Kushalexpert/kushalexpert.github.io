@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css?family=Teko");
+body {
+  margin: 0;
+}
+
+a {
+  color: #00ffff00;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .content {
+  width: auto;
+  height: auto;
+  position: relative;
+}
+.container .content h1 {
+  font-size: 5rem;
+  margin: 0;
+  font-family: "Teko";
+  position: relative;
+  color: black;
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+.container .content .layers {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.container .content #logo {
+  z-index: 2;
+}
+.container .content #layer1 {
+  color: red;
+  z-index: 1;
+}
+.container .content #layer2 {
+  color: #7afeff;
+  z-index: 1;
+}
